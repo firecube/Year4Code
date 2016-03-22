@@ -95,14 +95,13 @@ void colourChange()
 			colour = userColour;
 		}
 
-		sendColour();
-
 		loopTimer.initializeMs(50, colourChange).start(true);
 	}
 }
 
 void doColourChange()
 {
+	sendColour();
 	stripNo = 0;
 	loopTimer.initializeMs(50, colourChange).start(true);
 }

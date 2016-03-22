@@ -1,0 +1,9 @@
+<Page backgroundColor="{{rgb}}" xmlns="http://schemas.nativescript.org/tns.xsd" shownModally="onShownModally" actionBarHidden="true">
+    <GridLayout backgroundColor="{{rgb}}" rows="auto,100,100,100,auto" columns="auto" horizontalAlignment="center" verticalAlignment="center">
+        <Label text="Choose a Colour" class="colour-title" row="0" col="0" />
+        <Slider minValue="0" maxValue="255" row="1" col="0" value="{{r}}" />
+        <Slider minValue="0" maxValue="255" row="2" col="0" value="{{g}}" />
+        <Slider minValue="0" maxValue="255" row="3" col="0" value="{{b}}" />
+        <Button text="OK" class="colour-title" tap="onChooseColour" row="4" col="0" />
+    </GridLayout>
+</Page>

@@ -1,9 +1,6 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="loaded">
-    <Page.actionBar>
-        <ActionBar title="Ladybrook Year 4" />
-    </Page.actionBar>
-  <StackLayout>
-    <Button class="circle" id="btnColour" />
-    
-  </StackLayout>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="loaded" actionBarHidden="true">
+  <GridLayout rows="auto,300" columns="auto" horizontalAlignment="center" verticalAlignment="center">
+    <Label text="Ladybrook Year 4" class="title" row="0" col="0" />
+    <Button class="circle" backgroundColor="{{rgb}}" id="btnColour" row="1" col="0" tap="colourPicker" />
+  </GridLayout>
 </Page>
