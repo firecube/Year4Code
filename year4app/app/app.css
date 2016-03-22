@@ -1,0 +1,31 @@
+﻿.title {
+    font-size: 30;
+    horizontal-align: center;
+    margin: 20;
+    color: white;
+}
+
+button {
+    font-size: 42;
+    horizontal-align: center;
+}
+
+
+Page {
+    background-color: #9244a1;
+}
+
+ActionBar {
+    background-color: #9244a1;
+    color: white;  
+    text-align: center;  
+}
+
+.circle {
+    width: 200;
+    height: 200;
+    border-radius: 100;
+    border-width: 2;
+    border-color: white;
+    background-color: #9244a1;
+}
