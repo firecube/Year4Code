@@ -29,4 +29,4 @@
 
 *.sdf
 
-ESP8266\ESP8266\out\*
+ESP8266/ESP8266/out/*
