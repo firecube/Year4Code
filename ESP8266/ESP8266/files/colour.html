@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Current Colour</title>
+    <script>
+            function componentToHex(c) {
+                var hex = c.toString(16);
+                hex = hex.length == 1 ? '0' + hex : hex;
+                while (hex.length < 6) {
+                    hex = '0' + hex;
+                }
+                return '#' + hex;
+            }
+
+            function setColour(colour) {
+                var hex = componentToHex(colour);
+                document.body.style.backgroundColor = hex;
+            }
+
+            function onOpen(evt) {
+                writeToScreen("CONNECTED");
+            }
+
+            function onClose(evt) {
+                writeToScreen("DISCONNECTED");
+            }
+
+            function onMessage(evt) {
+                var colour = parseInt(evt.data);
+                setColour(colour);
+            }
+
+            function writeToScreen(message) {
+                var output = document.getElementById("output");
+                output.innerHTML = message;
+            }
+
+            function init(colour) {
+                setColour(colour);
+
+                var wsUri = "ws://" + location.host + "/";
+                websocket = new WebSocket(wsUri);
+                websocket.onopen = function (evt) { onOpen(evt) };
+                websocket.onclose = function (evt) { onClose(evt) };
+                websocket.onmessage = function (evt) { onMessage(evt) };
+            }
+    </script>
+</head>
+<body onload="init({colour})">
+    <h1 id="output"></h1>
+</body>
+</html>

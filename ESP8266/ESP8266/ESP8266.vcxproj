@@ -54,9 +54,10 @@
     </BuildLog>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="files\colour.html" />
     <None Include="Makefile" />
     <None Include="Makefile-user.mk" />
-	<None Include="espmake.cmd" />
+    <None Include="espmake.cmd" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="app\application.cpp" />
