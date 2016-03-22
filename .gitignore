@@ -30,3 +30,18 @@
 *.sdf
 
 ESP8266/ESP8266/out/*
+
+
+*/node_modules/*
+*/platforms/*/*
+*/www/build/*
+*/hooks/*
+*/plugins/*/
+
+*/app/**/*.js
+*/app/**/*.js.map
+*/app/*.js
+*/app/*.js.map
+
+packages
+.vs
